@@ -4,12 +4,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="book1" class="exam.Book">
-        <property name="myDao" ref="myDao"></property>
-    </bean>
+    <bean id="book1" class="exam.Book"></bean>
     <bean id="book2" class="exam.Book"></bean>
 
-    <bean name="myService" class="com.example.spring02.component.MyService"></bean>
-    <bean name="myDao" class="com.example.spring02.component.MyDao"></bean>
+    <bean id="myService" class="com.example.spring02.component.MyService">
+        <property name="myDao" ref="myDao"></property>
+    </bean>
+    <bean id="myDao" class="com.example.spring02.component.MyDao"></bean>
 
 </beans>
